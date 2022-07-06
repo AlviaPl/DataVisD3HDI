@@ -1,0 +1,142 @@
+
+<html>  
+<head>  
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="app.js"></script>  
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+<body > 
+
+
+<br>
+<h2 class="section">Human Development Index and Happiness Score</h2>
+<hr>
+
+<div class="intro">
+
+    <p>
+    The Human Development Index (HDI) is a statistic created by the United Nations that evaluates the quality of education, the life expectancy and the per capita income of a country.
+    This index ranges from 0 to 1: the higher the score, the more the country qualifies as "developed". 
+    </p>
+    
+    <p>
+    Similarly, the United Nations created another index: the Happiness Score of a country. This score relies on people's own rating of their lives.
+    </p>
+
+    <button id="clickButton" onclick="project()">Let's explore these two statistics a bit further!</button>
+
+</div>
+
+<div id="divPlots">
+    
+    <div id="plot1">
+
+        <h3>Let's introduce the Human Development Index </h3> 
+        <hr id="lineSep">
+
+        <p> &#62 This first plot gives you an overview of all countries HDI scores.</p>
+
+        <p id="instructions"></p><br>
+
+        <h4 class="center_plot"> | The world's HDI Scores in 2019 |</h4>
+
+        <div id="q1_plot" class="center_plot"></div>
+            
+    </div>
+
+
+    <div id="plot2">
+    
+        <p> &#62 This second graph shows how the worlds overall HDI scores have evolved over the years. <br> </p>
+
+        <p id="instructions"> &#128161 Make sure to visualize the statistics you are interessed in by checking the corresponding boxes! </p> <br>
+
+        <h4 class="center_plot"> | World HDI Score evolution over Years |</h4> <br>
+
+        <div id="button_q2 "class="center_plot">
+            <input type="checkbox" class="checkbox" value="Median" ><label>Median</label>
+            <input type="checkbox" class="checkbox" value="q1" ><label>q1</label>
+            <input type="checkbox" class="checkbox" value="q3" ><label>q3</label>
+            <input type="checkbox" class="checkbox" value="min" ><label>min</label>
+            <input type="checkbox" class="checkbox" value="max" ><label>max</label>
+        </div>
+
+        <div id="q2_plot" class="center_plot"></div>
+
+</div>   
+
+
+    <div id="plot3"> <br> <br>
+
+        <h3>Let's now explore the Happiness Score </h3>
+        <hr id="lineSep">
+
+        <p>&#62 Let's see the evolution of the Happiness Score in different regions over the years.</p>
+
+        <p id="instructions"> &#128161  Make sure to select the year you are interessed in!</p> <br>
+
+        <h4 class="center_plot"> | Evolution of the Average Happiness Score by Region over the Years |</h4> <br>
+
+        <div id="radio_q3" class="center_plot"> 
+            <input type="radio" id="q4_2015" name="year" value="2015" checked="checked">
+            <label for="2015">2015</label>
+            <input type="radio" id="q4_2016" name="year" value="2016">
+            <label for="2016">2016</label>
+            <input type="radio" id="q4_2017" name="year" value="2017">
+            <label for="2017">2017</label>
+            <input type="radio" id="q4_2018" name="year" value="2018">
+            <label for="2018">2018</label>
+            <input type="radio" id="q4_2019" name="year" value="2019">
+            <label for="2019">2019</label>
+        </div>
+
+        <div id="q3_plot" class="center_plot"></div>
+
+    </div>
+
+    <div id="plot4">
+
+        <p>&#62 Different components are taken into account in order to come up with an overall Happiness Score.<br>
+        &nbsp NB: The components do NOT sum up to make out the Happiness Score. They are simply metrics that allow us to better explain the Happiness Score of a 
+        given country. <br>
+        &nbsp The Happiness Scores of the countries are given for reference only.
+        </p>
+
+        <p id="instructions"> &#128161  Feel free to select and explore the different components!</p> <br>
+
+        <h4 class="center_plot"> | Explaining the Happiness Score: Importance of different components |</h4>
+
+        <div class="center_plot"> <br> <select id="selectButton" style = "background-color:aliceblue" ></select> </div>
+
+        <div id="q4_plot" class="center_plot"></div>
+
+    </div>
+
+
+    <div id="plot5"> <br> <br>
+        
+        <h3>Are HDI and Happiness scores related? </h3>
+        <hr id="lineSep">
+
+        <p>&#62 Now that we have a better understanding of these two scores, let's see if there exist a relationship between them! </p>
+
+        <p id="instructions"> &#128161 Make sure to hover over the points to identify the countries!</p> <br>
+
+        <h4 class="center_plot"> | Scatterplot of the HDI and Happiness Score for all countries in 2019 |</h4>
+
+        <div id="q5_plot" class="center_plot"> </div><br>
+
+        <p> &#62 It seems that HDI and Happiness scores are indeed correlated!</p> <br>
+
+    </div>  
+    
+    <div id="credits"> Alexandra Plage, 2022</div>
+
+</div>
+
+
+   
+</body>  
+</html>  
